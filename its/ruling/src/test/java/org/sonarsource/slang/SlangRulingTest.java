@@ -52,7 +52,7 @@ public class SlangRulingTest {
   private static Orchestrator orchestrator;
   private static boolean keepSonarqubeRunning = "true".equals(System.getProperty("keepSonarqubeRunning"));
 
-  private static final Set<String> LANGUAGES = new HashSet<>(Arrays.asList("kotlin", "ruby", "scala", "go"));
+  private static final Set<String> LANGUAGES = new HashSet<>(Arrays.asList("go"));
 
   @BeforeClass
   public static void setUp() {
@@ -144,6 +144,7 @@ public class SlangRulingTest {
   }
 
   @Test
+  @Ignore
   public void test_kotlin() throws IOException {
     Map<String, String> properties = new HashMap<>();
     properties.put("sonar.inclusions", "sources/kotlin/**/*.kt, ruling/src/test/resources/sources/kotlin/**/*.kt");
@@ -152,6 +153,7 @@ public class SlangRulingTest {
   }
 
   @Test
+  @Ignore
   public void test_ruby() throws IOException {
     Map<String, String> properties = new HashMap<>();
     properties.put("sonar.inclusions", "sources/ruby/**/*.rb, ruling/src/test/resources/sources/ruby/**/*.rb");
@@ -159,6 +161,7 @@ public class SlangRulingTest {
   }
 
   @Test
+  @Ignore
   public void test_scala() throws IOException {
     Map<String, String> properties = new HashMap<>();
     properties.put("sonar.inclusions", "sources/scala/**/*.scala, ruling/src/test/resources/sources/scala/**/*.scala");
@@ -166,6 +169,7 @@ public class SlangRulingTest {
   }
 
   @Test
+  @Ignore
   public void test_go() throws IOException {
     Map<String, String> properties = new HashMap<>();
     properties.put("sonar.inclusions", "sources/go/**/*.go, ruling/src/test/resources/sources/go/**/*.go");

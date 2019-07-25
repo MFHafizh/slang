@@ -4,5 +4,5 @@ plugins {
 
 golang {
   packagePath = 'github.com/SonarSource/slang/its/ruling/source/go'
-  goVersion = '1.10'
+  goVersion = '1.12.7'
 }

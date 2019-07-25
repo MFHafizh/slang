@@ -25,6 +25,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.Ignore;
 import org.junit.rules.TemporaryFolder;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
@@ -53,6 +54,7 @@ public class CoverageTest extends TestBase {
     Files.write(reportCopy, reportContent.getBytes(UTF_8));
   }
 
+  @Ignore
   @Test
   public void ruby_coverage() throws Exception {
     setUpRuby();
@@ -83,6 +85,7 @@ public class CoverageTest extends TestBase {
     Files.write(reportCopy, reportContent.getBytes(UTF_8));
   }
 
+  @Ignore
   @Test
   public void scala_coverage() throws Exception {
     setUpScala();
